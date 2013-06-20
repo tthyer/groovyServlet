@@ -1,0 +1,20 @@
+apply plugin: 'groovy'
+apply plugin: 'jetty'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'org.codehaus.groovy:groovy-all:2.1.5'
+
+	providedCompile 'javax.servlet:servlet-api:2.4'
+
+	testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
+	testCompile 'org.httpunit:httpunit:1.7.2'
+}
+
+task "createDirs" << {
+	sourceSets*.groovy.srcDirs*.each { it.mkdirs() }
+	sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+}
