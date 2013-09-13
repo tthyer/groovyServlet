@@ -1,5 +1,6 @@
 apply plugin: 'groovy'
 apply plugin: 'jetty'
+apply plugin: 'wrapper'
 
 repositories {
 	mavenCentral()
@@ -14,6 +15,8 @@ dependencies {
 	testCompile 'org.httpunit:httpunit:1.7.2'
 }
 
+// Generates the project structure
+// this is relatively a lot of work so I can be lazy once later
 task "createDirs" << {
 	sourceSets*.groovy.srcDirs*.each { it.mkdirs() }
 	sourceSets*.resources.srcDirs*.each { it.mkdirs() }
