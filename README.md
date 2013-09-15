@@ -18,4 +18,5 @@ Read more about the hows and whys [here][6].
 [3]: http://www.gradle.org/docs/current/userguide/jetty_plugin.html
 [4]: https://code.google.com/p/spock/
 [5]: http://httpunit.sourceforge.net/index.html
-[6]: http://scriptogr.am/tessthyer/post/a-groovyservlet-and-then-some
+[6]: http://tthyer.github.io/blog/2013/09/15/groovy-servlet-example/
+
